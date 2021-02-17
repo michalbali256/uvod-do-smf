@@ -1,0 +1,12 @@
+{
+    "id": 132,
+    "jsonrpc": "2.0",
+    "result": {
+        "contents": [
+            "@DATA + 80",
+            "Relocatable Symbol",
+            "L: 8",
+            "T: D"
+        ]
+    }
+}

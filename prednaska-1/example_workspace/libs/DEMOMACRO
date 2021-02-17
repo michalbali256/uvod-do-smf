@@ -1,0 +1,9 @@
+ MACRO
+ DEMOMACRO &VAR
+
+ LR 1,1
+ 
+* Again, we step into the macro.
+ MAC SOME_VALUE
+
+ MEND

@@ -1,0 +1,20 @@
+
+&NOPARAM  SETC 'SAM31'
+          &NOPARAM       This is highlighted as a remark.
+&PARAM    SETC 'LR'
+          &PARAM 1,1     '1,1' are highlighted as operands.
+&V SETC ',1'
+  LR 1&V
+
+&INSTR  SETC 'LR'
+&C  SETA 1
+
+.LOOP ANOP
+
+ SAM31 1,1 lr
+&INSTR  SETC 'SAM31'
+SAM31 OPSYN LR
+&C  SETA &C+1
+ AIF (&C EQ 2).LOOP
+
+

@@ -1,0 +1,521 @@
+                                                                                                                                    
+                                         High Level Assembler Option Summary                   (PTF UI72986)   Page    1            
+                                                                                            HLASM R6.0  2021/02/16 02.18            
+  No Overriding ASMAOPT Parameters                                                                                                  
+  Overriding Parameters-  OBJECT,NODECK,TERM                                                                                        
+  No Process Statements                                                                                                             
+                                                                                                                                    
+                                                                                                                                    
+  Options for this Assembly                                                                                                         
+                    NOADATA                                                                                                         
+                      ALIGN                                                                                                         
+                    NOASA                                                                                                           
+                      BATCH                                                                                                         
+                      CODEPAGE(047C)                                                                                                
+                    NOCOMPAT                                                                                                        
+                    NODATAMAP                                                                                                       
+                    NODBCS                                                                                                          
+3 PARM/OPTION       NODECK                                                                                                          
+                      DXREF                                                                                                         
+                      ESD                                                                                                           
+                    NOEXIT                                                                                                          
+                      FAIL(NOMSG,NOMNOTE,MAXERRS(500))                                                                              
+                      FLAG(0,ALIGN,CONT,EXLITW,NOIMPLEN,NOLONGER,NOPAGE0,PUSH,RECORD,NOSIGNED,NOSUBSTR,NOTRUNC,USING0)              
+                    NOFOLD                                                                                                          
+                    NOGOFF                                                                                                          
+                    NOINFO                                                                                                          
+                      ILMA                                                                                                          
+                      LANGUAGE(EN)                                                                                                  
+                    NOLIBMAC                                                                                                        
+                      LINECOUNT(60)                                                                                                 
+                      LIST(121)                                                                                                     
+                      MACHINE(,NOLIST)                                                                                              
+                      MXREF(SOURCE)                                                                                                 
+3 PARM/OPTION         OBJECT                                                                                                        
+                      OPTABLE(UNI,NOLIST)                                                                                           
+                    NOPCONTROL                                                                                                      
+                    NOPESTOP                                                                                                        
+                    NOPROFILE                                                                                                       
+                    NORA2                                                                                                           
+                    NORENT                                                                                                          
+                      RLD                                                                                                           
+                      RXREF                                                                                                         
+                      SECTALGN(8)                                                                                                   
+                      SIZE(MAX)                                                                                                     
+                    NOSUPRWARN                                                                                                      
+                      SYSPARM()                                                                                                     
+3 PARM/OPTION         TERM(WIDE)                                                                                                    
+                    NOTEST                                                                                                          
+                      THREAD                                                                                                        
+                    NOTRANSLATE                                                                                                     
+                      TYPECHECK(MAGNITUDE,REGISTER)                                                                                 
+                      USING(NOLIMIT,MAP,WARN(15))                                                                                   
+                    NOWORKFILE                                                                                                      
+                      XREF(SHORT,UNREFS)                                                                                            
+                                                                                                                                    
+  No Overriding DD Names                                                                                                            
+                                                                                                                                    
+                                              External Symbol Dictionary                                       Page    2            
+Symbol   Type   Id     Address  Length   Owner Id Flags Alias-of                            HLASM R6.0  2021/02/16 02.18            
+          PC 00000001 00000000 00000000             00                                                                              
+RESMGRC   SD 00000002 00000000 00000168             06                                                                              
+CLEANUP   ER 00000003                                                                                                               
+CLEANUP   SD 00000004 00000168 0000002A             06                                                                              
+                                                                                                                                    
+                                                                                                               Page    3            
+  Active Usings: None                                                                                                               
+  Loc  Object Code    Addr1 Addr2  Stmt   Source Statement                                  HLASM R6.0  2021/02/16 02.18            
+                                      1          SYSSTATE ASCENV=P,AMODE64=NO,ARCHLVL=2,OSREL=ZOSV2R1           00029100            
+                                      2+*        THE VALUE OF SYSSTATE IS NOW SET TO ASCENV=P AMODE64=NO ARCHLVX01-SYSST            
+                                       +               L=2 OSREL=ZOSV2R1 RMODE64=NO                                                 
+                      0000B           3 LINK     EQU      11                                                    00029200            
+000000                00000 00168     4 RESMGRC   CSECT                                                         00029303            
+                                      5 RESMGRC   AMODE 31                                                      00029403            
+                                      6 RESMGRC   RMODE ANY                                                     00029503            
+000000 90EC D00C            0000C     7          STM   14,12,12(13)                                             00029600            
+000004 18CF                           8          LR    12,15                                                    00029700            
+                 R:C  00000           9          USING RESMGRC,12                                               00029803            
+                                     10          STORAGE OBTAIN,LENGTH=DYNSIZE                                  00029900            
+000006 5800 C060            00060    12+         L      0,=A(DYNSIZE)                .STORAGE LENGTH       @P9C 01-STORA            
+00000A 58F0 C064            00064    13+         L      15,=AL1(B'00000000',(0*16),(0),B'00000010')            X01-STORA            
+                                       +                                             .CONTROL INFORMATION  @P9C                     
+00000E 58E0 0010            00010    14+         L      14,16(0,0)                   .CVT ADDRESS               01-STORA            
+000012 58EE 0304            00304    15+         L      14,772(14,0)                 .ADDR SYST LINKAGE TABLE   01-STORA            
+000016 58EE 00A0            000A0    16+         L      14,160(14,0)                 .OBTAIN LX/EX FOR OBTAIN   01-STORA            
+00001A B218 E000      00000          17+         PC     0(14)                        .PC TO STORAGE RTN         01-STORA            
+00001E 5010 D008            00008    18          ST    1,8(,13)                                                 00030000            
+000022 50D0 1004            00004    19          ST    13,4(,1)                                                 00030100            
+000026 18D1                          20          LR    13,1                                                     00030200            
+                 R:D  00000          21          USING DYNAMIC,13                                               00030300            
+                                     22 *                                                                       00030400            
+000028 C0F0 0000 0020       00068    23          LARL  15,START                                                 00030500            
+00002E B240 000F                     24          BAKR  0,15                                                     00030600            
+                                     25 *                                                                       00030700            
+000032 181D                          26          LR    1,13                                                     00030800            
+000034 58D0 D004            00004    27          L     13,4(,13)                                                00030900            
+                                     28          STORAGE RELEASE,LENGTH=DYNSIZE,ADDR=(1)                        00031000            
+000038 5800 C060            00060    30+         L      0,=A(DYNSIZE)                .STORAGE LENGTH       @P9C 01-STORA            
+00003C A7F8 0003                     31+         LHI    15,X'0003'                   .Add in parameters    @PCA 01-STORA            
+000040 58E0 0010            00010    32+         L      14,16(0,0)                   .CVT ADDRESS               01-STORA            
+000044 58EE 0304            00304    33+         L      14,772(14,0)                 .ADDR SYST LINKAGE TABLE   01-STORA            
+000048 58EE 00CC            000CC    34+         L      14,204(14,0)                 .OBTAIN LX/EX FOR RELEASE  01-STORA            
+00004C B218 E000      00000          35+         PC     0(14)                        .PC TO STORAGE RTN         01-STORA            
+000050 980C D014            00014    36          LM    0,12,20(13)                                              00031100            
+000054 58E0 D00C            0000C    37          L     14,12(,13)                                               00031200            
+000058 07FE                          38          BR    14                                                       00031300            
+                                     39 *                                                                       00031400            
+000060                               40          LTORG ,                                                        00031500            
+000060 00001000                      41                =A(DYNSIZE)                                                                  
+000064 00000002                      42                =AL1(B'00000000',(0*16),(0),B'00000010')                                     
+                                     43 *                                                                       00031600            
+000068                               44 START    DS    0H                                                       00031700            
+000068 5810 C148            00148    45          L     1,=V(CLEANUP)                                            00031812            
+                                     46          IDENTIFY EP=CLEANUP,ENTRY=(1)                                  00031912            
+00006C A705 0006            00078    47+         BRAS  0,*+12                            GET EPNAME ADDR   @L1C 01-IDENT            
+000070 C3D3C5C1D5E4D740              48+         DC    CL8'CLEANUP'                      EP SYMBOL              01-IDENT            
+000078 0A29                          51+         SVC   41                                ISSUE IDENTIFY SVC     01-IDENT            
+                                     52          MODESET MODE=SUP,KEY=ZERO                                      00032021            
+                                     53+* MACDATE Y-3 18217                                                @L1C                     
+00007A A718 003C                     55+         LHI   1,B'0000000000111100'                               @L1C 01-MODES            
+00007E 0A6B                          56+         SVC   107                                                      01-MODES            
+000080 4150 D048            00048    57          LA    5,RESMGRTOKEN                                            00032105            
+000084 5860 C148            00148    58          L     6,=V(CLEANUP)                                            00032213            
+                                                                                                               Page    4            
+  Active Usings: RESMGRC,R12  DYNAMIC,R13                                                                                           
+  Loc  Object Code    Addr1 Addr2  Stmt   Source Statement                                  HLASM R6.0  2021/02/16 02.18            
+                                     59          RESMGR   ADD,TYPE=TASK,ASID=CURRENT,TCB=CURRENT,              X00032303            
+                                                       TOKEN=(5),ROUTINE=(BRANCH,(6)),MF=(E,RESMGRP)            00032413            
+000088 4110 D04C            0004C    62+         LA    1,RESMGRP                         LOAD PARAMETER REG 1   02-IHBIN            
+00008C 9201 1000      00000          63+         MVI   0(1),X'1'                   VERSION NUMBER               01-RESMG            
+000090 9497 1001      00001          64+         NI    1(1),B'10010111'            FLAGS BYTE                   01-RESMG            
+000094 9680 1001      00001          65+         OI    1(1),B'10000000'            FLAGS BYTE                   01-RESMG            
+000098 9202 1002      00002          66+         MVI   2(1),X'2'                   UPDATE ROUTINE TYPE          01-RESMG            
+00009C 9201 1003      00003          67+         MVI   3(1),X'01'                  REQUEST=ADD                  01-RESMG            
+0000A0 1FFF                          68+         SLR   15,15                       ASID=CURRENT                 01-RESMG            
+0000A2 40F0 1006            00006    69+         STH   15,6(,1)                    SAVE ASID                    01-RESMG            
+0000A6 1FFF                          70+         SLR   15,15                       TCB=CURRENT                  01-RESMG            
+0000A8 50F0 1008            00008    71+         ST    15,8(,1)                    SAVE TCB ADDRESS             01-RESMG            
+0000AC 5060 100C            0000C    72+         ST    (6),12(,1)                  SAVE ROUTINE ADDRESS         01-RESMG            
+0000B0 5050 1010            00010    73+         ST    5,16(,1)                    SAVE TOKEN ADDRESS           01-RESMG            
+0000B4 58E0 0010            00010    74+         L     14,16(0,0)                  LOAD ADDRESS OF CVT          01-RESMG            
+0000B8 58EE 0304            00304    75+         L     14,772(14,0)                GET SFT ADDRESS              01-RESMG            
+0000BC 58EE 00A4            000A4    76+         L     14,164(14,0)                GET LX/EX FOR RESMGR         01-RESMG            
+0000C0 B218 E000      00000          77+         PC    0(14)                       INVOKE SERVICE               01-RESMG            
+0000C4 D200 D06C C15C 0006C 0015C    78          MVC   ENQ_L,ENQ_M                                              00032820            
+                                     79          ENQ   (QNAME,RNAME,E,L'RNAME,STEP),MF=(E,ENQ_L)                00032921            
+                                     81+*         MACRO-DATE = 03/16/15                                    @PFC                     
+0000CA                               82+         DS    0H                                                  @04A 01-ENQ              
+0000CA 4110 D06C            0006C    85+         LA    1,ENQ_L                       ADDR OF PARAM IN REG  @L1C 02-IHBSE            
+0000CE 9208 1001      00001          86+         MVI   1(1),L'RNAME            PELMILEN - RNAME length.         01-ENQ              
+0000D2 9437 1002      00002          87+         NI    2(1),55                   SET OPTIONS SPECIFIED @ZA00466 01-ENQ              
+0000D6 41E0 C14C            0014C    88+         LA    14,QNAME                  GET QNAME ADDRESS              01-ENQ              
+0000DA 50E0 1004            00004    89+         ST    14,4(0,1)                 STORE QNAME ADDRESS            01-ENQ              
+0000DE 41E0 C154            00154    90+         LA    14,RNAME                  GET RNAME ADDRESS              01-ENQ              
+0000E2 50E0 1008            00008    91+         ST    14,8(0,1)                 STORE RNAME ADDRESS            01-ENQ              
+0000E6 0A38                          92+         SVC   56                                                       01-ENQ              
+                                     93          STATUS SET,MC,PROCESS                                          00033021            
+0000E8                               94+         DS    0H                                                  @L1A 01-STATU            
+0000E8 58F0 0010            00010    95+         L     15,X'10'(0,0)      GET ADDRESS OF CVT INTO REG 15   @L1A 01-STATU            
+0000EC 58FF 008C            0008C    96+         L     15,X'8C'(15,0)     GET ADDRESS OF ECVT INTO REG 15  @L1A 01-STATU            
+0000F0 58FF 00D0            000D0    97+         L     15,X'D0'(15,0)     GET ADDRESS OF SERVICE ROUTINE   @L1A 01-STATU            
+0000F4 0DEF                          98+         BASR  14,15              BRANCH TO SERVICE ROUTINE        @L1A 01-STATU            
+                                     99          IARV64 REQUEST=GETSTOR,SEGMENTS==FD'1',                       X00033121            
+                                                       ORIGIN=ORIG64,                                          X00033221            
+                                                       MF=(E,IARV64_P)                                          00033321            
+                                    100+*                     MACDATE -09/04/20-<6>                                                 
+0000F6                              101+M00M0019 DS    0H                             IARV64-6                  01-IARV6            
+                                    102+              PUSH  PRINT                                               01-IARV6            
+                                    103+                     PRINT ON                                           01-IARV6            
+0000F6 4110 D078            00078   104+         LA    1,IARV64_P         ++ LOCATE ARG PARMS                   01-IARV6            
+0000FA D757 1000 1000 00000 00000   105+         XC    0(88,1),0(1)       ++ INITIALIZE                         01-IARV6            
+000100 9201 1001      00001         106+         MVI   1(1),1             ++ INPUT XREQUEST                     01-IARV6            
+000104 D207 1008 C140 00008 00140   107+         MVC   8(8,1),=FD'1'      ++ INPUT XSEGMENTS                    01-IARV6            
+00010A 58E0 0010            00010   108+         L     14,16(0,0)        GET CVT ADDRESS                        01-IARV6            
+00010E 58EE 0304            00304   109+         L     14,772(14,0)      GET SYSTEM FUNCTION TABLE ADDRESS      01-IARV6            
+000112 58EE 00D0            000D0   110+         L     14,208(14,0)      GET LX/EX FOR SERVICE ROUTINE          01-IARV6            
+000116 41F0 000E            0000E   111+         LA    15,14             EX OFFSET FOR IARV64 ASSIGN            01-IARV6            
+00011A 16EF                         112+         OR    14,15             GENERATE LX/EX COMBINATION             01-IARV6            
+00011C B218 E000      00000         113+         PC    0(14)             PC TO IARV64 SERVICE                   01-IARV6            
+000120 D207 D0D0 1028 000D0 00028   114+         MVC   ORIG64(8),40(1)    ++ XORIGIN AL8                        01-IARV6            
+                                    115+         POP   PRINT                                                    01-IARV6            
+                                                                                                               Page    5            
+  Active Usings: RESMGRC,R12  DYNAMIC,R13                                                                                           
+  Loc  Object Code    Addr1 Addr2  Stmt   Source Statement                                  HLASM R6.0  2021/02/16 02.18            
+                                    116+*                                            IARV64-6                                       
+                                    118          STATUS RESET,MC,PROCESS                                        00033421            
+000126                              119+         DS    0H                                                  @L1A 01-STATU            
+000126 58F0 0010            00010   120+         L     15,X'10'(0,0)      GET ADDRESS OF CVT INTO REG 15   @L1A 01-STATU            
+00012A 58FF 008C            0008C   121+         L     15,X'8C'(15,0)     GET ADDRESS OF ECVT INTO REG 15  @L1A 01-STATU            
+00012E 58FF 00D4            000D4   122+         L     15,X'D4'(15,0)     GET ADDRESS OF SERVICE ROUTINE   @L1A 01-STATU            
+000132 0DEF                         123+         BASR  14,15              BRANCH TO SERVICE ROUTINE        @L1A 01-STATU            
+                                    124          MODESET MODE=PROB,KEY=NZERO                                    00033521            
+                                    125+* MACDATE Y-3 18217                                                @L1C                     
+000134 A718 0024                    127+         LHI   1,B'0000000000100100'                               @L1C 01-MODES            
+000138 0A6B                         128+         SVC   107                                                      01-MODES            
+00013A 17FF                         129          XR    15,15                                                    00033621            
+00013C 0101                         130          PR                                                             00033721            
+                                    131 *                                                                       00033821            
+000140                              132          LTORG ,                                                        00033921            
+000140 0000000000000001             133                =FD'1'                                                                       
+000148 00000000                     134                =V(CLEANUP)                                                                  
+                                    135 *                                                                       00034021            
+00014C C1E2C4C6C1E2C4C6             136 QNAME    DC    CL8'ASDFASDF'                                            00034121            
+000154 C6C4E2C1C6C4E2C1             137 RNAME    DC    CL8'FDSAFDSA'                                            00034221            
+                                    138 ENQ_M    ENQ   (QNAME,RNAME,E,L'RNAME,STEP),MF=L                        00034321            
+                                    140+*         MACRO-DATE = 03/16/15                                    @PFC                     
+00015C                              141+         DS    0F                      ESTABLISH A FULLWORD BOUNDARY    01-ENQ              
+                      0015C         142+ENQ_M    EQU   *                                                 X02113 01-ENQ              
+00015C C0                           143+         DC    AL1(192)                PELLAST flag byte.        X02113 01-ENQ              
+00015D 08                           144+         DC    AL1(L'RNAME)            PELMILEN - RNAME length.         01-ENQ              
+00015E 00                           145+         DC    BL1'00000000'                                            01-ENQ              
+                                    146+*                                      PELFLAG - flag byte 2.                               
+00015F 00                           147+         DC    AL1(0)                  PELRET - return code byte.       01-ENQ              
+000160 0000014C                     148+         DC    A(QNAME)                QNAME ADDRESS                    01-ENQ              
+000164 00000154                     149+         DC    A(RNAME)                RNAME ADDRESS                    01-ENQ              
+                                    150 *                                                                       00034421            
+000000                00000 01000   151 DYNAMIC  DSECT ,                                                        00034521            
+000000                              152 SAVEAREA DS    18F                                                      00034621            
+                                    153 *                                                                       00034721            
+000048                              154 RESMGRTOKEN DS F                                                        00034821            
+                                    155 RESMGRP  RESMGR   ADD,TYPE=TASK,ASID=CURRENT,TCB=CURRENT,TOKEN=0,      X00034921            
+                                                       ROUTINE=(LINK,0),MF=L                                    00035021            
+00004C                              156+RESMGRP  DS    0F                          LIST NAME                    01-RESMG            
+00004C 01                           157+         DC    XL1'1'                      VERSION NUMBER               01-RESMG            
+00004D 80                           158+         DC    BL1'10000000'                                 FLAGS BYTE 01-RESMG            
+00004E 01                           159+         DC    XL1'1'                      LINKAGE TYPE                 01-RESMG            
+00004F 01                           160+         DC    XL1'01'                     REQUEST=ADD                  01-RESMG            
+000050 0000                         161+         DC    XL2'00'                     RESERVED                     01-RESMG            
+000052 0000                         162+         DC    H'0'                        ASID                         01-RESMG            
+000054 00000000                     163+         DC    A(0)                        TCB ADDRESS                  01-RESMG            
+000058 00000000                     164+         DC    A(0)                        ROUTINE ADDRESS              01-RESMG            
+00005C 00000000                     165+         DC    A(0)                        TOKEN ADDRESS                01-RESMG            
+000060 00000000                     166+         DC    A(0)                        ECB ADDRESS                  01-RESMG            
+000064 00000000                     167+         DC    A(0)                        PARAM ADDRESS                01-RESMG            
+000068 00000000                     168+         DC    A(0)                        TTOKEN ADDRESS        @L1A   01-RESMG            
+                                    169 ENQ_L    ENQ   (QNAME,RNAME,E),MF=L                                     00035121            
+                                    171+*         MACRO-DATE = 03/16/15                                    @PFC                     
+00006C                              172+         DS    0F                      ESTABLISH A FULLWORD BOUNDARY    01-ENQ              
+                                                                                                               Page    6            
+  Active Usings: RESMGRC,R12  DYNAMIC,R13                                                                                           
+D-Loc  Object Code    Addr1 Addr2  Stmt   Source Statement                                  HLASM R6.0  2021/02/16 02.18            
+                      0006C         173+ENQ_L    EQU   *                                                 X02113 01-ENQ              
+00006C C0                           174+         DC    AL1(192)                PELLAST flag byte.        X02113 01-ENQ              
+00006D 08                           175+         DC    AL1(8)                  PELMILEN - RNAME length.         01-ENQ              
+00006E 00                           176+         DC    BL1'00000000'                                            01-ENQ              
+                                    177+*                                      PELFLAG - flag byte 2.                               
+00006F 00                           178+         DC    AL1(0)                  PELRET - return code byte.       01-ENQ              
+000070 0000014C                     179+         DC    A(QNAME)                QNAME ADDRESS                    01-ENQ              
+000074 00000154                     180+         DC    A(RNAME)                RNAME ADDRESS                    01-ENQ              
+                                    181          IARV64 MF=(L,IARV64_P)                                         00035221            
+                                    182+*                     MACDATE -09/04/20-<6>                                                 
+                                    183+              PUSH  PRINT                                               01-IARV6            
+                                    184+                     PRINT ON                                           01-IARV6            
+                      00078         185+M00M0028 EQU   IARV64_P           ++ IARV64 NAME                        01-IARV6            
+000078                              186+IARV64_P DS    0D                 ++ IARV64 PARM LIST                   01-IARV6            
+000078                              187+IARV64_P_XVERSION DS XL1          ++ INPUT XVERSION                     01-IARV6            
+000079                              188+IARV64_P_XREQUEST DS XL1          ++  XREQUEST                          01-IARV6            
+                      00001         189+IARV64_P_XREQUEST_GETSTOR EQU 1   ++ XREQUEST.GETSTOR KEYWORD           01-IARV6            
+                      00002         190+IARV64_P_XREQUEST_GETSHARED EQU 2 ++ XREQUEST.GETSHARED KEYWORD         01-IARV6            
+                      00003         191+IARV64_P_XREQUEST_DETACH EQU 3    ++ XREQUEST.DETACH KEYWORD            01-IARV6            
+                      00004         192+IARV64_P_XREQUEST_PAGEFIX EQU 4   ++ XREQUEST.PAGEFIX KEYWORD           01-IARV6            
+                      00005         193+IARV64_P_XREQUEST_PAGEUNFIX EQU 5 ++ XREQUEST.PAGEUNFIX KEYWORD         01-IARV6            
+                      00006         194+IARV64_P_XREQUEST_PAGEOUT EQU 6   ++ XREQUEST.PAGEOUT KEYWORD           01-IARV6            
+                      00007         195+IARV64_P_XREQUEST_DISCARDDATA EQU 7                                    X01-IARV6            
+                                       +                                  ++ XREQUEST.DISCARDDATA KEYWORD                           
+                      00008         196+IARV64_P_XREQUEST_PAGEIN EQU 8    ++ XREQUEST.PAGEIN KEYWORD            01-IARV6            
+                      00009         197+IARV64_P_XREQUEST_PROTECT EQU 9   ++ XREQUEST.PROTECT KEYWORD           01-IARV6            
+                      0000A         198+IARV64_P_XREQUEST_SHAREMEMOBJ EQU 10                                   X01-IARV6            
+                                       +                                  ++ XREQUEST.SHAREMEMOBJ KEYWORD                           
+                      0000B         199+IARV64_P_XREQUEST_CHANGEACCESS EQU 11                                  X01-IARV6            
+                                       +                                  ++ XREQUEST.CHANGEACCESS KEYWORD                          
+                      0000C         200+IARV64_P_XREQUEST_UNPROTECT EQU 12                                     X01-IARV6            
+                                       +                                  ++ XREQUEST.UNPROTECT KEYWORD                             
+                      0000D         201+IARV64_P_XREQUEST_CHANGEGUARD EQU 13                                   X01-IARV6            
+                                       +                                  ++ XREQUEST.CHANGEGUARD KEYWORD                           
+                      0000E         202+IARV64_P_XREQUEST_LIST EQU 14     ++ XREQUEST.LIST KEYWORD              01-IARV6            
+                      0000F         203+IARV64_P_XREQUEST_GETCOMMON EQU 15                                     X01-IARV6            
+                                       +                                  ++ XREQUEST.GETCOMMON KEYWORD                             
+                      00010         204+IARV64_P_XREQUEST_COUNTPAGES EQU 16                                    X01-IARV6            
+                                       +                                  ++ XREQUEST.COUNTPAGES KEYWORD                            
+                      00011         205+IARV64_P_XREQUEST_PCIEFIX EQU 17  ++ XREQUEST.PCIEFIX KEYWORD           01-IARV6            
+                      00012         206+IARV64_P_XREQUEST_PCIEUNFIX EQU 18                                     X01-IARV6            
+                                       +                                  ++ XREQUEST.PCIEUNFIX KEYWORD                             
+                      00013         207+IARV64_P_XREQUEST_CHANGEATTRIBUTE EQU 19                               X01-IARV6            
+                                       +                                  ++ XREQUEST.CHANGEATTRIBUTE KEYWORD                       
+00007A                              208+IARV64_P_XFLAGS0 DS BL.8          ++ FIELD_LABEL                        01-IARV6            
+                      00080         209+IARV64_P_XMOTKNSOURCE_SYSTEM EQU B'10000000'                           X01-IARV6            
+                                       +                                  ++ XMOTKNSOURCE.SYSTEM KEYWORD                            
+                      00040         210+IARV64_P_XMOTKNCREATOR_SYSTEM EQU B'01000000'                          X01-IARV6            
+                                       +                                  ++ XMOTKNCREATOR.SYSTEM KEYWORD                           
+                      00020         211+IARV64_P_XMATCH_MOTOKEN EQU B'00100000'                                X01-IARV6            
+                                       +                                  ++ XMATCH.MOTOKEN KEYWORD                                 
+00007B                              212+IARV64_P_XKEY DS XL1              ++                                    01-IARV6            
+00007C                              213+IARV64_P_XFLAGS1 DS BL.8          ++ FIELD_LABEL                        01-IARV6            
+                      00080         214+IARV64_P_KEYUSED_KEY EQU B'10000000'                                   X01-IARV6            
+                                       +                                  ++ KEYUSED.KEY KEYWORD                                    
+                                                                                                               Page    7            
+  Active Usings: RESMGRC,R12  DYNAMIC,R13                                                                                           
+D-Loc  Object Code    Addr1 Addr2  Stmt   Source Statement                                  HLASM R6.0  2021/02/16 02.18            
+                      00040         215+IARV64_P_KEYUSED_USERTKN EQU B'01000000'                               X01-IARV6            
+                                       +                                  ++ KEYUSED.USERTKN KEYWORD                                
+                      00020         216+IARV64_P_KEYUSED_TTOKEN EQU B'00100000'                                X01-IARV6            
+                                       +                                  ++ KEYUSED.TTOKEN KEYWORD                                 
+                      00010         217+IARV64_P_KEYUSED_CONVERTSTART EQU B'00010000'                          X01-IARV6            
+                                       +                                  ++ KEYUSED.CONVERTSTART KEYWORD                           
+                      00008         218+IARV64_P_KEYUSED_GUARDSIZE64 EQU B'00001000'                           X01-IARV6            
+                                       +                                  ++ KEYUSED.GUARDSIZE64 KEYWORD                            
+                      00004         219+IARV64_P_KEYUSED_CONVERTSIZE64 EQU B'00000100'                         X01-IARV6            
+                                       +                                  ++ KEYUSED.CONVERTSIZE64 KEYWORD                          
+                      00002         220+IARV64_P_KEYUSED_MOTKN EQU B'00000010'                                 X01-IARV6            
+                                       +                                  ++ KEYUSED.MOTKN KEYWORD                                  
+                      00001         221+IARV64_P_KEYUSED_OWNERJOBNAME EQU B'00000001'                          X01-IARV6            
+                                       +                                  ++ KEYUSED.OWNERJOBNAME KEYWORD                           
+00007D                              222+IARV64_P_XFLAGS2 DS BL.8          ++ FIELD_LABEL                        01-IARV6            
+                      00080         223+IARV64_P_XCOND_YES EQU B'10000000'                                     X01-IARV6            
+                                       +                                  ++ XCOND.YES KEYWORD                                      
+                      00040         224+IARV64_P_XFPROT_NO EQU B'01000000'                                     X01-IARV6            
+                                       +                                  ++ XFPROT.NO KEYWORD                                      
+                      00020         225+IARV64_P_XCONTROL_AUTH EQU B'00100000'                                 X01-IARV6            
+                                       +                                  ++ XCONTROL.AUTH KEYWORD                                  
+                      00010         226+IARV64_P_XGUARDLOC_HIGH EQU B'00010000'                                X01-IARV6            
+                                       +                                  ++ XGUARDLOC.HIGH KEYWORD                                 
+                      00008         227+IARV64_P_XCHANGEACCESS_GLOBAL EQU B'00001000'                          X01-IARV6            
+                                       +                                  ++ XCHANGEACCESS.GLOBAL KEYWORD                           
+                      00004         228+IARV64_P_XPAGEFRAMESIZE_1MEG EQU B'00000100'                           X01-IARV6            
+                                       +                                  ++ XPAGEFRAMESIZE.1MEG KEYWORD                            
+                      00002         229+IARV64_P_XPAGEFRAMESIZE_MAX EQU B'00000010'                            X01-IARV6            
+                                       +                                  ++ XPAGEFRAMESIZE.MAX KEYWORD                             
+                      00001         230+IARV64_P_XPAGEFRAMESIZE_ALL EQU B'00000001'                            X01-IARV6            
+                                       +                                  ++ XPAGEFRAMESIZE.ALL KEYWORD                             
+00007E                              231+IARV64_P_XFLAGS3 DS BL.8          ++ FIELD_LABEL                        01-IARV6            
+                      00080         232+IARV64_P_XMATCH_USERTOKEN EQU B'10000000'                              X01-IARV6            
+                                       +                                  ++ XMATCH.USERTOKEN KEYWORD                               
+                      00040         233+IARV64_P_XAFFINITY_SYSTEM EQU B'01000000'                              X01-IARV6            
+                                       +                                  ++ XAFFINITY.SYSTEM KEYWORD                               
+                      00020         234+IARV64_P_XUSE2GTO32G_YES EQU B'00100000'                               X01-IARV6            
+                                       +                                  ++ XUSE2GTO32G.YES KEYWORD                                
+                      00010         235+IARV64_P_XOWNER_NO EQU B'00010000'                                     X01-IARV6            
+                                       +                                  ++ XOWNER.NO KEYWORD                                      
+                      00008         236+IARV64_P_XV64SELECT_NO EQU B'00001000'                                 X01-IARV6            
+                                       +                                  ++ XV64SELECT.NO KEYWORD                                  
+                      00004         237+IARV64_P_XSVCDUMPRGN_NO EQU B'00000100'                                X01-IARV6            
+                                       +                                  ++ XSVCDUMPRGN.NO KEYWORD                                 
+                      00002         238+IARV64_P_XV64SHARED_NO EQU B'00000010'                                 X01-IARV6            
+                                       +                                  ++ XV64SHARED.NO KEYWORD                                  
+                      00001         239+IARV64_P_XSVCDUMPRGN_ALL EQU B'00000001'                               X01-IARV6            
+                                       +                                  ++ XSVCDUMPRGN.ALL KEYWORD                                
+00007F                              240+IARV64_P_XFLAGS4 DS BL.8          ++ FIELD_LABEL                        01-IARV6            
+                      00080         241+IARV64_P_XLONG_NO EQU B'10000000' ++ XLONG.NO KEYWORD                   01-IARV6            
+                      00040         242+IARV64_P_XCLEAR_NO EQU B'01000000'                                     X01-IARV6            
+                                       +                                  ++ XCLEAR.NO KEYWORD                                      
+                      00020         243+IARV64_P_XVIEW_READONLY EQU B'00100000'                                X01-IARV6            
+                                       +                                  ++ XVIEW.READONLY KEYWORD                                 
+                                                                                                               Page    8            
+  Active Usings: RESMGRC,R12  DYNAMIC,R13                                                                                           
+D-Loc  Object Code    Addr1 Addr2  Stmt   Source Statement                                  HLASM R6.0  2021/02/16 02.18            
+                      00010         244+IARV64_P_XVIEW_SHAREDWRITE EQU B'00010000'                             X01-IARV6            
+                                       +                                  ++ XVIEW.SHAREDWRITE KEYWORD                              
+                      00008         245+IARV64_P_XVIEW_HIDDEN EQU B'00001000'                                  X01-IARV6            
+                                       +                                  ++ XVIEW.HIDDEN KEYWORD                                   
+                      00004         246+IARV64_P_XCONVERT_TOGUARD EQU B'00000100'                              X01-IARV6            
+                                       +                                  ++ XCONVERT.TOGUARD KEYWORD                               
+                      00002         247+IARV64_P_XCONVERT_FROMGUARD EQU B'00000010'                            X01-IARV6            
+                                       +                                  ++ XCONVERT.FROMGUARD KEYWORD                             
+                      00001         248+IARV64_P_XKEEPREAL_NO EQU B'00000001'                                  X01-IARV6            
+                                       +                                  ++ XKEEPREAL.NO KEYWORD                                   
+000080                              249+IARV64_P_XSEGMENTS DS D           ++                                    01-IARV6            
+000088                              250+IARV64_P_XTTOKEN DS CL16          ++                                    01-IARV6            
+000098                              251+IARV64_P_XUSERTKN DS D            ++                                    01-IARV6            
+0000A0                              252+IARV64_P_XORIGIN DS AD            ++                                    01-IARV6            
+0000A8                              253+IARV64_P_XRANGLIST DS AD          ++                                    01-IARV6            
+0000B0                              254+IARV64_P_XMEMOBJSTART DS AD       ++                                    01-IARV6            
+0000B8                              255+IARV64_P_XGUARDSIZE DS F          ++                                    01-IARV6            
+0000BC                              256+IARV64_P_XCONVERTSIZE DS F        ++                                    01-IARV6            
+0000C0                              257+IARV64_P_XALETVALUE DS F          ++                                    01-IARV6            
+0000C4                              258+IARV64_P_XNUMRANGE DS F           ++                                    01-IARV6            
+0000C8                              259+IARV64_P_XV64LISTPTR DS A         ++                                    01-IARV6            
+0000CC                              260+IARV64_P_XV64LISTLENGTH DS F      ++                                    01-IARV6            
+                      000D0         261+IARV64_P_PL_END EQU *             ++ END OF BASE PLIST                  01-IARV6            
+0000D0                000D0 00098   262+         ORG   IARV64_P+32                                              01-IARV6            
+000098                              263+IARV64_P_XOUTMOTKN DS D           ++                                    01-IARV6            
+0000A0                000A0 00098   264+         ORG   IARV64_P+32                                              01-IARV6            
+000098                              265+IARV64_P_XMOTKN DS D              ++                                    01-IARV6            
+0000A0                000A0 000B0   266+         ORG   IARV64_P+56                                              01-IARV6            
+0000B0                              267+IARV64_P_XINORIGIN DS AD          ++                                    01-IARV6            
+0000B8                000B8 000D0   268+         ORG   IARV64_P_PL_END    RESET LOCATION COUNTER                01-IARV6            
+                      00058         269+IARV64_PL EQU  *-IARV64_P         ++ LENGTH OF PLIST                    01-IARV6            
+                                    271+         POP   PRINT                                                    01-IARV6            
+                                    272+*                                            IARV64-6                                       
+0000D0                              274 ORIG64   DS    AD                                                       00035321            
+0000D8                000D8 01000   275          ORG   DYNAMIC+(((*-DYNAMIC+4095)/4096)*4096)                   00035421            
+001000                              276          DS    0C                                                       00035521            
+                      01000         277 DYNSIZE  EQU   *-DYNAMIC                                                00035621            
+                                    278 *                                                                       00035721            
+000168                00168 0002A   279 CLEANUP  CSECT ,                                                        00035821            
+                                    280 CLEANUP  AMODE 31                                                       00035921            
+                                    281 CLEANUP  RMODE ANY                                                      00036021            
+                 R:C  00168         282          USING CLEANUP,12                                               00036121            
+000168 90EC D00C            0000C   283          STM   14,12,12(13)                                             00036221            
+00016C 18CF                         284          LR    12,15                                                    00036321            
+                                    285          WTO   'CLEANUP'                                                00036420            
+00016E 0700                         287+         CNOP  0,4                                                      01-WTO              
+000170 A715 0008            00180   288+         BRAS  1,IHB0029A               BRANCH AROUND MESSAGE      @LCC 01-WTO              
+000174 000B                         289+         DC    AL2(11)                  TEXT LENGTH            @YA17152 01-WTO              
+000176 0000                         290+         DC    B'0000000000000000'      MCSFLAGS                        01-WTO              
+000178 C3D3C5C1D5E4D7               291+         DC    C'CLEANUP'               MESSAGE TEXT               @L6C 01-WTO              
+000180                              292+IHB0029A DS    0H                                                       01-WTO              
+000180 0A23                         293+         SVC   35                       ISSUE SVC 35               @L6A 01-WTO              
+000182 0AC7                         294          SVC   199                                                      00036521            
+                                                                                                               Page    9            
+  Active Usings: CLEANUP,R12  DYNAMIC,R13                                                                                           
+  Loc  Object Code    Addr1 Addr2  Stmt   Source Statement                                  HLASM R6.0  2021/02/16 02.18            
+000184 98EC D00C            0000C   295          LM    14,12,12(13)                                             00036620            
+000188 A709 0001                    296          LGHI  0,1                                                      00036721            
+00018C A7F9 0008                    297          LGHI  15,8                                                     00036821            
+000190 07FE                         298          BR    14                                                       00036921            
+                                    299          DROP  ,                                                        00037021            
+                                    300 *                                                                       00037121            
+                                    301          END                                                            00038000            
+                                                                                                                                    
+                                                 Relocation Dictionary                                         Page   10            
+   Pos.Id   Rel.Id   Address  Type    Length  Action                                        HLASM R6.0  2021/02/16 02.18            
+  00000002 00000002 00000160   A         4       +                                                                                  
+  00000002 00000002 00000164   A         4       +                                                                                  
+  00000002 00000003 00000148   V         4      ST                                                                                  
+                                                                                                                                    
+                               Ordinary Symbol and Literal Cross Reference                                     Page   11            
+Symbol   Length   Value     Id    R Type Asm  Program   Defn References                     HLASM R6.0  2021/02/16 02.18            
+CLEANUP       1 00000168 00000004     J                  279  280   281   282U                                                      
+CLEANUP       1 00000000 00000003     T                  134  134                                                                   
+DYNAMIC       1 00000000 FFFFFFFF     J                  151   21U  275   275   277                                                 
+DYNSIZE       1 00001000 FFFFFFFF A   U                  277   41                                                                   
+ENQ_L         1 0000006C FFFFFFFF     U                  173   78M   85                                                             
+ENQ_M         1 0000015C 00000002     U                  142   78                                                                   
+IARV64_P      8 00000078 FFFFFFFF     D  D               186  104   185   262   264   266   269                                     
+IARV64_P_PL_END                                                                                                                     
+              1 000000D0 FFFFFFFF     U                  261  268                                                                   
+IHB0029A      2 00000180 00000004     H  H               292  288B                                                                  
+ORIG64        8 000000D0 FFFFFFFF     A  AD              274  114M                                                                  
+QNAME         8 0000014C 00000002     C  C               136   88   148   179                                                       
+RESMGRC       1 00000000 00000002     J                    4    5     6     9U                                                      
+RESMGRP       4 0000004C FFFFFFFF     F  F               156   62                                                                   
+RESMGRTOKEN                                                                                                                         
+              4 00000048 FFFFFFFF     F  F               154   57                                                                   
+RNAME         8 00000154 00000002     C  C               137   86    90   144   149   180                                           
+START         2 00000068 00000002     H  H                44   23                                                                   
+=A(DYNSIZE)                                                                                                                         
+              4 00000060 00000002     A                   41   12    30                                                             
+=AL1(B'00000000',(0*16),(0),B'00000010')                                                                                            
+              1 00000064 00000002     R                   42   13                                                                   
+=FD'1'        8 00000140 00000002     F                  133  107                                                                   
+=V(CLEANUP)                                                                                                                         
+              4 00000148 00000002     V                  134   45    58                                                             
+                                                                                                                                    
+                                  Unreferenced Symbols Defined in CSECTs                                       Page   12            
+  Defn  Symbol                                                                              HLASM R6.0  2021/02/16 02.18            
+     3  LINK                                                                                                                        
+   101  M00M0019                                                                                                                    
+                                                                                                                                    
+                                          Macro and Copy Code Source Summary                                   Page   13            
+ Con Source                                        Volume    Members                        HLASM R6.0  2021/02/16 02.18            
+  L3 SYS1.MACLIB                                   MVR24A    ENQ      IARV64   IDENTIFY IHBINNRA IHBINNRR IHBSETR                   
+                                                             MODESET  RESMGR   STATUS   STORAGE  SYSSTATE WTO                       
+                                                                                                                                    
+                                                Dsect Cross Reference                                          Page   14            
+Dsect     Length      Id       Defn                                                         HLASM R6.0  2021/02/16 02.18            
+DYNAMIC  00001000  FFFFFFFF     151                                                                                                 
+                                                                                                                                    
+                                                      Using Map                                                Page   15            
+                                                                                            HLASM R6.0  2021/02/16 02.18            
+  Stmt  -----Location----- Action ----------------Using----------------- Reg Max     Last Label and Using Text                      
+          Count      Id           Type          Value    Range     Id        Disp    Stmt                                           
+     9  00000006  00000002 USING  ORDINARY    00000000 00001000 00000002  12 0015C    107 RESMGRC,12                                
+    21  00000028  00000002 USING  ORDINARY    00000000 00001000 FFFFFFFF  13 000D0    114 DYNAMIC,13                                
+   282  00000168  00000004 USING  ORDINARY    00000168 00001000 00000004  12 00000        CLEANUP,12                                
+   299  00000192  00000004 DROP                                           **                                                        
+                                                                                                                                    
+                                   General Purpose Register Cross Reference                                    Page   16            
+ Register  References (M=modified, B=branch, U=USING, D=DROP, N=index)                      HLASM R6.0  2021/02/16 02.18            
+    0(0)       7    12M   24    30M   36M   47M  283   295M  296M                                                                   
+    1(1)       7    18    19    20    24    26M   36M   45M   55M   62M   63    64    65    66    67    69    71    72              
+              73    85M   86    87    89    91   104M  105   105   106   107   114   127M  283   288M  295M                         
+    2(2)       7    24    36M  130M  283   295M                                                                                     
+    3(3)       7    17M   24    35M   36M   77M  113M  130M  283   295M                                                             
+    4(4)       7    17M   24    35M   36M   77M  113M  130M  283   295M                                                             
+    5(5)       7    24    36M   57M   73   130M  283   295M                                                                         
+    6(6)       7    24    36M   58M   72   130M  283   295M                                                                         
+    7(7)       7    24    36M  130M  283   295M                                                                                     
+    8(8)       7    24    36M  130M  283   295M                                                                                     
+    9(9)       7    24    36M  130M  283   295M                                                                                     
+   10(A)       7    24    36M  130M  283   295M                                                                                     
+   11(B)       7    24    36M  130M  283   295M                                                                                     
+   12(C)       7     8M    9U   24    36M  130M  282U  283   284M  295M  299D                                                       
+   13(D)       7    18    19    20M   21U   24    26    27M   27    36    37   130M  283   295   299D                               
+   14(E)       7    14M   15M   15N   16M   16N   17    17M   24    32M   33M   33N   34M   34N   35    35M   37M   38B             
+              74M   75M   75N   76M   76N   77    77M   88M   89    90M   91    98M  108M  109M  109N  110M  110N  112M             
+             113   113M  123M  130M  283   295M  298B                                                                               
+   15(F)       7     8    13M   23M   24B   24    31M   68M   68    69    70M   70    71    95M   96M   96N   97M   97N             
+              98B  111M  112   120M  121M  121N  122M  122N  123B  129M  129   283   284   295M  297M                               
+                                                                                                                                    
+                                  Diagnostic Cross Reference and Assembler Summary                             Page   17            
+                                                                                            HLASM R6.0  2021/02/16 02.18            
+     No Statements Flagged in this Assembly                                                                                         
+HIGH LEVEL ASSEMBLER, 5696-234, RELEASE 6.0, PTF UI72986                                                                            
+SYSTEM: z/OS 02.04.00              JOBNAME: KUCSLA      STEPNAME: CL         PROCSTEP: C                                            
+Unicode Module:   ASMA047C   From Page     1148   To Page    17584           ECECP: International 1                                 
+Data Sets Allocated for this Assembly                                                                                               
+ Con DDname   Data Set Name                                Volume  Member                                                           
+  P1 SYSIN    KUCSL02.TEST.RESMGR.ASM                      TSU053  RESMGRC                                                          
+  L1 SYSLIB   KUCSL02.TEST.RESMGR.ASM                      TSU053                                                                   
+  L2          SYS1.MODGEN                                  MVR24A                                                                   
+  L3          SYS1.MACLIB                                  MVR24A                                                                   
+     SYSLIN   KUCSL02.TEST.RESMGR.OBJ                      TSU022  RESMGRC                                                          
+     SYSPRINT KUCSL02.KUCSLA.JOB50140.D0000102.?                                                                                    
+     SYSTERM  KUCSL02.KUCSLA.JOB50140.D0000104.?                                                                                    
+                                                                                                                                    
+1042536K allocated to Buffer Pool       Storage required    3620K                                                                   
+     79 Primary Input Records Read        42647 Library Records Read                  0 Work File Reads                             
+      0 ASMAOPT Records Read                521 Primary Print Records Written         0 Work File Writes                            
+     13 Object Records Written                0 ADATA Records Written                                                               
+Assembly Start Time: 02.18.50 Stop Time: 02.18.50 Processor Time: 00.00.00.0414                                                     
+Return Code 000                                                                                                                     

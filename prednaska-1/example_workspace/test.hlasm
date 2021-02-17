@@ -1,0 +1,14 @@
+&VARP(L'C) SETA 45
+&V SETA 1
+
+
+C EQU 1
+A EQU 1
+
+ MACRO
+ @STH
+ MEND
+
+ 
+
+

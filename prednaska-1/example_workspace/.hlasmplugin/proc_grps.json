@@ -1,0 +1,16 @@
+{
+  "pgroups": [
+    {
+      "name": "P1",
+      "libs": [
+        "libs"
+      ]
+    },
+    {
+      "name": "JULSUB_GRP",
+      "libs": [
+        "JULSUB_MACRO"
+      ]
+    }
+  ]
+}

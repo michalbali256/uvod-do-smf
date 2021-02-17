@@ -1,0 +1,12 @@
+{
+    "jsonrpc": "2.0",
+    "method": "textDocument/didOpen",
+    "params": {
+        "textDocument": {
+            "uri": "file:///c%3A/Users/misko/Documents/hlasm_folder/pgm/source_code.hlasm",
+            "languageId": "hlasm",
+            "version": 1,
+            "text": " L 1,1\r\n\r\n\r\n* BASIC INSTRUCTIONS\r\n LR 1,1 This is highlighted as a remark\r\n\r\n* When the debugging session stops at a macro call,\r\n* we can step into the macro or step over it.\r\n\r\n* DEMOMACRO 'p\r\n\r\n MAC asd\r\n \r\n* COPY COPYFILE\r\n\r\n\r\n AIF ('&SYSPARM' EQ 'STH').HERE\r\n      nonexistent_instruction\r\n* Here the AIF skips the J instruction.\r\n.HERE ANOP\r\n\r\n\r\n\r\n AIF (&AG).HH\r\n\r\nA EQU 10,2,C'P'\r\nB EQU 15\r\n\r\nC DC ADL8(1+1)\r\n\r\n&V SETC 'DACO'\r\n&V EQU 1 \r\n   LR DACO,DACO\r\n\r\n&VARP(30) SETA A,456,48,7\r\n\r\n&VARP(31+L'C) SETA 45\r\nD EQU                                                                 1X3145\r\nIIIIIIIIIIIIIII1\r\n\r\n \r\n&VAR SETA 10\r\n* CODE GENERATION \r\n*      AIF  (&VAR EQ 10).HERE\r\n*      asdjhasdahsjdbjahsdbjahsdb\r\n* Here the AIF skips the J instruction.\r\n\r\n\r\n AMODE 64\r\n \r\n&z seta 1\r\n UNPK 24(9,2),256(8,2)\r\nRELOC LR 1,1\r\n\r\n&AH SETA 1\r\n    AIF (&VAR EQ 4).STH comment\r\n\r\n\r\n  DC S(1(X),X)\r\nX EQU 1"
+        }
+    }
+}

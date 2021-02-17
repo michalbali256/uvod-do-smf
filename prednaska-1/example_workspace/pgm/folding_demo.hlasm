@@ -1,0 +1,18 @@
+ MACRO
+ IF
+ MEND
+
+ MACRO
+ IFEND
+ MEND
+ 
+ 
+             IF  R15,NH,256,CHI
+               STG R0,LAB
+               XGR R15,R15
+LEN            LG R0,SS 
+               LR 1,1
+               LR 1,1
+*              A COMMENT
+             IFEND ,
+LEN2         EQU 1

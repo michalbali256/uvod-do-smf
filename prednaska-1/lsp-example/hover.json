@@ -1,0 +1,14 @@
+{
+    "jsonrpc": "2.0",
+    "id": 132,
+    "method": "textDocument/hover",
+    "params": {
+        "textDocument": {
+            "uri": "file:///c%3A/Users/misko/Documents/prg/che-che4z-lsp-for-hlasm/example_workspace/JULSUB"
+        },
+        "position": {
+            "line": 174,
+            "character": 20
+        }
+    }
+}

@@ -1,0 +1,13 @@
+ MACRO
+&V MAC$ &VAR
+* The value of &VAR can be seen in the variables section. 
+ LR 1,1
+* We can also step over this copy.
+ COPY COPYFILE
+* Now we are not interested in this macro,
+* so we set a breakpoint in opencode.
+ LR 1,1
+ 
+ MEXIT
+&A SETA 1
+ MEND

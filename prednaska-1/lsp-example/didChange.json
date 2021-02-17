@@ -1,0 +1,26 @@
+{
+    "jsonrpc": "2.0",
+    "method": "textDocument/didChange",
+    "params": {
+        "textDocument": {
+            "uri": "file:///c%3A/Users/misko/Documents/prg/che-che4z-lsp-for-hlasm/example_workspace/JULSUB",
+            "version": 2
+        },
+        "contentChanges": [
+            {
+                "range": {
+                    "start": {
+                        "line": 159,
+                        "character": 23
+                    },
+                    "end": {
+                        "line": 159,
+                        "character": 23
+                    }
+                },
+                "rangeLength": 0,
+                "text": "1"
+            }
+        ]
+    }
+}

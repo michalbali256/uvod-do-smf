@@ -1,0 +1,52 @@
+ L 1,1
+
+
+* BASIC INSTRUCTIONS
+ LR 1,1 This is highlighted as a remark
+
+* When the debugging session stops at a macro call,
+* we can step into the macro or step over it.
+
+* DEMOMACRO 'p
+
+ MAC asd
+ 
+* COPY COPYFILE
+
+ L 15,11111(,15)
+
+A EQU 10,2,C'P'
+B EQU 15
+
+C DC ADL8(1+1)
+
+&V SETC 'DACO'
+&V EQU 1 
+   LR DACO,DACO
+
+&VARP(30) SETA A,456,48,7
+
+&VARP(31+L'C) SETA 45
+D EQU                                                                 1X3145
+IIIIIIIIIIIIIII1
+
+ 
+&VAR SETA 10
+* CODE GENERATION 
+*  AIF  (&VAR EQ 10).HERE
+*      asdjhasdahsjdbjahsdbjahsdb
+* Here the AIF skips the J instruction.
+
+
+ AMODE 64
+ 
+&z seta 1
+ UNPK 24(9,2),256(8,2)
+RELOC LR 1,1
+
+&AH SETA 1
+    AIF (&VAR EQ 4).STH comment
+
+  DC S(1(X),X)
+X EQU 1
+ 
