@@ -9,7 +9,8 @@ Toto repo obsahuje materialy ktore sa objavili na hodine Moderní trendy v korpo
 - Syntax HLASM a ako sa kompiluje, tri druhy instrukcii
 - Čo je HLASM Language support
 - Témy úloh na semester  
-Do priecinka [prednaska-1](prednaska-1) som nahral materialy co som ukazoval pocas 1. prednasky. Odporucam skusit si nainstalovat HLASM Language support (vo VS Code vlavo vyberiete ikonku Extensions a date do vyhladavania `HLASM`), otvorit is `example_workspace` a vyskusat si to.  
+Do priecinka [prednaska-1](prednaska-1) som nahral materialy co som ukazoval pocas 1. prednasky. Odporucam skusit si nainstalovat HLASM Language support (vo VS Code vlavo vyberiete ikonku Extensions a date do vyhladavania `HLASM`), otvorit is `example_workspace` a vyskusat si to.
+
 **Do buducej hodiny:**
 - skusit si skompilovat a spustit projekt, ak sa to nepodari, dokoncime na buducom stretnuti. Navod tu: [Build guide](build-guide.md)
 - zvolit si temu a oznamit mi to mailom. Pouzite reply all, aby ste dali vediet ostatnym, ze tema je uz zabrata.
