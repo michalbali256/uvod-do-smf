@@ -26,6 +26,10 @@ Wiki s dokumentaciou: https://github.com/eclipse/che-che4z-lsp-for-hlasm/wiki
 
 Stranka HLASM Language Support extension: https://marketplace.visualstudio.com/items?itemName=broadcomMFD.hlasm-language-support
 
+Ako pridat TextMate gramatiku do VS Code extension: https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide
+
+LSP specifikacia: https://microsoft.github.io/language-server-protocol/specification
+
 [HLASM programmer's guide](https://www.ibm.com/support/knowledgecenter/SSENW6_1.6.0/com.ibm.hlasm.v1r6.asm/asmp1023.pdf?view=kc)
 
 # Kontakt
