@@ -15,7 +15,9 @@ Do priecinka [prednaska-1](prednaska-1) som nahral materialy co som ukazoval poc
 - skusit si skompilovat a spustit projekt, ak sa to nepodari, dokoncime na buducom stretnuti. Navod tu: [Build guide](build-guide.md)
 - zvolit si temu a oznamit mi to mailom. Pouzite reply all, aby ste dali vediet ostatnym, ze tema je uz zabrata.
 
-## 2. Prednaska \[23.2.2021 16:30\]
+## 2. Prednaska 23.2.2021 16:30
+- Pozreli sme sa blizsie na architekturu projektu HLASM Language support - https://github.com/eclipse/che-che4z-lsp-for-hlasm/wiki/Architecture-visualization
+- Vysvetlili sme si vyznam jednotlivych komponent a ake problemy riesia.
 
 # Linky
 HLASM Language Support repository: https://github.com/eclipse/che-che4z-lsp-for-hlasm
